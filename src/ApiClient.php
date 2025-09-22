@@ -57,7 +57,7 @@ class ApiClient implements ApiInterface
      * @param TokenStorageInterface|null $tokenStorage
      * @throws ApiClientException
      */
-    public function __construct(string $userId, string $secret, TokenStorageInterface $tokenStorage = null)
+    public function __construct(string $userId, string $secret, ?TokenStorageInterface $tokenStorage = null)
     {
         if ($tokenStorage === null) {
             $tokenStorage = new FileStorage();
